@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h2>Heart Disease Prediction</h2>
+    <form action="/predict" method="POST">
+        <label for="age">Age:</label>
+        <input type="text" name="age"><br>
+        
+        <label for="sex">Sex(1-Male/0-Female):</label>
+        <input type="text" name="sex"><br>
+
+        <label for="cp">Chest Pain Type (0-4):</label>
+        <input type="text" name="cp"><br>
+
+        <label for="fbs">Fasting Blood Sugar (0/1):</label>
+        <input type="text" name="fbs"><br>
+
+        <label for="restecg">Resting ECG (94-200):</label>
+        <input type="text" name="restecg"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
